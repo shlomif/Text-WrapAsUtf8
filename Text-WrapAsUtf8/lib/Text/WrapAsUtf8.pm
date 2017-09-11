@@ -45,6 +45,20 @@ __END__
 
 Text::WrapAsUtf8 - temporarily wraps output to stdout as the UTF-8 binmode.
 
+=head1 SYNOPSIS
+
+    use Text::WrapAsUtf8 qw/ print_utf8 /;
+
+    print_utf8("Hello\n", "World\n");
+
+=head1 DESCRIPTION
+
+This module implements two functions that proved of utility in my Website
+Meta Language
+(L<http://www.shlomifish.org/open-source/projects/website-meta-language/>)
+sites and which I decided to extract into a common CPAN distribution. They
+temporarily wrap output to STDOUT in the UTF-8 encoding layer.
+
 =head1 VERSION
 
 =head1 EXPORTS
