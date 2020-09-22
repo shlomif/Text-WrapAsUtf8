@@ -3,11 +3,14 @@ package Text::WrapAsUtf8;
 use strict;
 use warnings;
 
-our $VERSION = '0.0.1';
-
 use parent 'Exporter';
 
-our @EXPORT_OK = (qw(print_utf8 wrap_as_utf8));
+our @EXPORT_OK = (
+    qw(
+        print_utf8
+        wrap_as_utf8
+        )
+);
 
 sub wrap_as_utf8
 {
@@ -47,9 +50,13 @@ Text::WrapAsUtf8 - temporarily wraps output to stdout as the UTF-8 binmode.
 
 =head1 SYNOPSIS
 
-    use Text::WrapAsUtf8 qw/ print_utf8 /;
+    use Text::WrapAsUtf8 qw/ print_utf8 wrap_as_utf8 /;
 
     print_utf8("Hello\n", "World\n");
+
+    wrap_as_utf8(sub {
+        print("string containing unicode\n");
+    });
 
 =head1 DESCRIPTION
 
